@@ -29,7 +29,7 @@ export default function HeroSection() {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        const res = await axios.post("http://localhost:5000/contacts", formData);
+        const res = await axios.post("https://server-8gnx.onrender.com/contacts", formData);
         if (res.status === 200 || res.status === 201) {
           setSubmitStatus("success");
           setFormData({ fullName: "", email: "", mobile: "", city: "" });

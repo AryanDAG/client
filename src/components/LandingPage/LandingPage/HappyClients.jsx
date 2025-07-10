@@ -13,7 +13,7 @@ export default function HappyClients() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/clients")
+      .get("https://server-8gnx.onrender.com/clients")
       .then((res) => {
         const validClients = res.data?.data?.filter(
           (client) => client.name && client.image

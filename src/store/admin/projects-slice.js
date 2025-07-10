@@ -11,7 +11,7 @@ export const addNewProject = createAsyncThunk(
   "/projects/addNewProject",
   async (formData) => {
     const result = await axios.post(
-      "http://localhost:5000/projects",
+      "https://server-8gnx.onrender.com/projects",
       formData,
       {
         headers: {
@@ -27,7 +27,7 @@ export const addNewProject = createAsyncThunk(
 export const fetchAllProjects = createAsyncThunk(
   "/projects/fetchAllProjects",
   async () => {
-    const result = await axios.get("http://localhost:5000/projects");
+    const result = await axios.get("https://server-8gnx.onrender.com/projects");
     return result?.data;
   }
 );
@@ -37,7 +37,7 @@ export const editProject = createAsyncThunk(
   "/projects/editProject",
   async ({ id, formData }) => {
     const result = await axios.put(
-      `http://localhost:5000/projects/${id}`,
+      `https://server-8gnx.onrender.com/projects/${id}`,
       formData,
       {
         headers: {
@@ -53,7 +53,7 @@ export const editProject = createAsyncThunk(
 export const deleteProject = createAsyncThunk(
   "/projects/deleteProject",
   async (id) => {
-    const result = await axios.delete(`http://localhost:5000/projects/${id}`);
+    const result = await axios.delete(`https://server-8gnx.onrender.com/projects/${id}`);
     return result?.data;
   }
 );

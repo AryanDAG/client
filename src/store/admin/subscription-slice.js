@@ -9,7 +9,7 @@ const initialState = {
 export const fetchAllSubscriptions = createAsyncThunk(
   "subscriptions/fetchAllSubscriptions",
   async () => {
-    const result = await axios.get("http://localhost:5000/subscriptions");
+    const result = await axios.get("https://server-8gnx.onrender.com/subscriptions");
     return result?.data;
   }
 );

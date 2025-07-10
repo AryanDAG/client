@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchAllContacts = createAsyncThunk(
   "contacts/fetchAllContacts",
   async () => {
-    const result = await axios.get("http://localhost:5000/contacts");
+    const result = await axios.get("https://server-8gnx.onrender.com/contacts");
     return result?.data;
   }
 );

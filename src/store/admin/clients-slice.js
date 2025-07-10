@@ -11,7 +11,7 @@ export const addNewClient = createAsyncThunk(
   "clients/addNewClient",
   async (formData) => {
     const result = await axios.post(
-      "http://localhost:5000/clients", // POST /clients
+      "https://server-8gnx.onrender.com/clients", // POST /clients
       formData,
       {
         headers: {
@@ -27,7 +27,7 @@ export const addNewClient = createAsyncThunk(
 export const fetchAllClients = createAsyncThunk(
   "clients/fetchAllClients",
   async () => {
-    const result = await axios.get("http://localhost:5000/clients"); // GET /clients
+    const result = await axios.get("https://server-8gnx.onrender.com/clients"); // GET /clients
     return result?.data;
   }
 );
@@ -37,7 +37,7 @@ export const editClient = createAsyncThunk(
   "clients/editClient",
   async ({ id, formData }) => {
     const result = await axios.put(
-      `http://localhost:5000/clients/${id}`, // PUT /clients/:id
+      `https://server-8gnx.onrender.com/clients/${id}`, // PUT /clients/:id
       formData,
       {
         headers: {
@@ -53,7 +53,7 @@ export const editClient = createAsyncThunk(
 export const deleteClient = createAsyncThunk(
   "clients/deleteClient",
   async (id) => {
-    const result = await axios.delete(`http://localhost:5000/clients/${id}`); // DELETE /clients/:id
+    const result = await axios.delete(`https://server-8gnx.onrender.com/clients/${id}`); // DELETE /clients/:id
     return result?.data;
   }
 );

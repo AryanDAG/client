@@ -15,7 +15,7 @@ export default function ListingSection() {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/subscriptions', {
+      const res = await axios.post('https://server-8gnx.onrender.com/subscriptions', {
         email,
       });
 

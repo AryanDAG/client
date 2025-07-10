@@ -8,7 +8,7 @@ const OurProjects = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/projects")
+      .get("https://server-8gnx.onrender.com/projects")
       .then((res) => {
         const valid = res.data?.data?.filter(
           (p) => p.name && p.description && p.image
